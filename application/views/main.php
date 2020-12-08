@@ -41,13 +41,14 @@
   <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
     <div class="container d-flex">
       <div class="contact-info mr-auto">
-        <i class="icofont-envelope"></i> <a href="mailto:contact@example.com">contact@example.com</a>
-        <i class="icofont-phone"></i> +1 5589 55488 55
+        <i class="icofont-envelope"></i> <a href="mailto:teamofficialvisindometadata@gmail.com">teamofficialvisindometadata@gmail.com</a>
+        <i class="icofont-phone"></i> <a href="tel:+6282297255808"> +62 822-9725-5808</a>
       </div>
       <div class="social-links">
         <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
         <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
-        <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+        <a target="_blank" href="https://instagram.com/visindometadata?igshid=1o3s8kj8m3nop" class="instagram">
+          <i class="icofont-instagram"></i></a>
         <a href="#" class="skype"><i class="icofont-skype"></i></a>
         <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>
       </div>
@@ -58,16 +59,16 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html">PT. Visindo Meta Data<span>.</span></a></h1>
+      <h1 class="logo mr-auto"><a href="<?=base_url()?>main">VMD<span>.</span></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt=""></a>-->
+      <!-- <a href="<?=base_url()?>main" class="logo mr-auto"><img src="assets/img/logo.png" alt=""></a>-->
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Home</a></li>
+          <li class="active"><a href="<?=base_url()?>main">Home</a></li>
           <li><a href="#about">Tentang</a></li>
           <li><a href="#services">Pelayanan</a></li>
-          <li><a href="#portfolio">Portofolio</a></li>
+          <!--li><a href="#portfolio">Portofolio</a></li-->
           <li><a href="#team">Tim</a></li>
           <!--li class="drop-down"><a href="">Drop Down</a>
             <ul>
@@ -85,8 +86,8 @@
               <li><a href="#">Drop Down 3</a></li>
               <li><a href="#">Drop Down 4</a></li>
             </ul>
-          </li>
-          <li><a href="#contact">Contact</a></li-->
+          </li-->
+          <li><a href="#contact">Kontak</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
@@ -97,7 +98,7 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
-      <h1>Selamat Datang <!--span>BizLand</span-->
+      <h1><span> Visindo Meta Data</span>
       </h1>
       <!--h2>We are team of talanted designers making websites with Bootstrap</h2-->
       <h2></h2>
@@ -111,7 +112,7 @@
   <main id="main">
 
     <!-- ======= Featured Services Section ======= -->
-    <section id="featured-services" class="featured-services">
+    <!--section id="featured-services" class="featured-services">
       <div class="container" data-aos="fade-up">
 
         <div class="row">
@@ -150,16 +151,18 @@
         </div>
 
       </div>
-    </section><!-- End Featured Services Section -->
+    </section-->
+    <!-- End Featured Services Section -->
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>About</h2>
-          <h3>Find Out More <span>About Us</span></h3>
-          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+          <h2>Tentang</h2>
+          <h3>Temukan lebih banyak <span>Tentang Kami</span></h3>
+          <!--p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p-->
+          <p></p>
         </div>
 
         <div class="row">
@@ -167,12 +170,17 @@
             <img src="assets/img/about.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+            <h3>Refleksi</h3>
             <p class="font-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              Pendekatan PT. Visindo Meta Data untuk hubungan dengan klien adalah untuk menciptakan, memodifikasi, meningkatkan, dan melindungi lingkungan bisnis setiap klien PT. Visindo Meta Data melalui penciptaan berdasarkan informasi di khalayak utama berdasarkan pada presentasi kreatif informasi yang benar.
             </p>
-            <ul>
+            <p class="font-italic">
+              Kombinasi yang seimbang antara pengetahuan tentang kondisi setempat, pendekatan inovatif untuk komunikasi dan pengalaman dalam bekerja dan kemitraan telah meningkatkan kemampuan PT. Visindo Meta Data untuk secara efektif mengelola persepsi audiens utama. Kepatuhan terhadap standar etika yang ketat, serta penggunaan alat komunikasi yang kreatif membuat PT. Visindo Meta Data mampu memberikan secara optimal kebutuhan komunikasi bagi setiap kliennya.
+            </p>
+            <p class="font-italic">
+              Untuk itu kami hadir dengan semangat tersebut untuk dapat memberikan pelayanan dan kemudahan dalam arus informasi dan data yang dapat memberikan pengalaman lebih bagi penggunanya
+            </p>
+            <!--ul>
               <li>
                 <i class="bx bx-store-alt"></i>
                 <div>
@@ -187,12 +195,12 @@
                   <p>Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata redi</p>
                 </div>
               </li>
-            </ul>
-            <p>
+            </ul-->
+            <!--p>
               Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
               velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
               culpa qui officia deserunt mollit anim id est laborum
-            </p>
+            </p-->
           </div>
         </div>
 
@@ -200,7 +208,7 @@
     </section><!-- End About Section -->
 
     <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills">
+    <!--section id="skills" class="skills">
       <div class="container" data-aos="fade-up">
 
         <div class="row skills-content">
@@ -258,10 +266,11 @@
         </div>
 
       </div>
-    </section><!-- End Skills Section -->
+    </section-->
+    <!-- End Skills Section -->
 
     <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts">
+    <!--section id="counts" class="counts">
       <div class="container" data-aos="fade-up">
 
         <div class="row">
@@ -301,10 +310,11 @@
         </div>
 
       </div>
-    </section><!-- End Counts Section -->
+    </section-->
+    <!-- End Counts Section -->
 
     <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients section-bg">
+    <!--section id="clients" class="clients section-bg">
       <div class="container" data-aos="zoom-in">
 
         <div class="row">
@@ -336,44 +346,52 @@
         </div>
 
       </div>
-    </section><!-- End Clients Section -->
+    </section-->
+    <!-- End Clients Section -->
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Services</h2>
-          <h3>Check our <span>Services</span></h3>
-          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+          <h2>Pelayanan</h2>
+          <h3>Cek <span>Pelayanan</span> kami</h3>
+          <!--p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p-->
+          <p></p>
         </div>
 
         <div class="row">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4><a href="">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4><a href="">Pelayanan BPN</a></h4>
+              <p>
+                Surveyor Pengukuran, Pemetaan Entry Data Buku Tanah, Surat Ukur, Validasi Tekstual, Validasi Spatial, Peningkatan Kualitas Data GeoKKPWeb, Digitalisasi Dokumen Arsp dan Warkah, Surveyor PTSL K1, Pemetaan K4 PTSL
+              </p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Sed ut perspiciatis</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+              <h4><a href="">E-Arsip</a></h4>
+              <p>
+                salah satu pengembangan produk dan pelayanan yang dikhususkan untuk pengelolaan arsip yang ada di Badan Pertanahan Nasional
+              </p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="">Magni Dolores</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+              <h4><a href="">Pembangunan Aplikasi</a></h4>
+              <p>
+                Kami melayani pembuatan aplikasi atau software yang berbasis Desktop dan Web yang di customze sesuai dengan kebutuhan anda
+              </p>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+          <!--div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-world"></i></div>
               <h4><a href="">Nemo Enim</a></h4>
@@ -395,7 +413,7 @@
               <h4><a href="">Divera don</a></h4>
               <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
             </div>
-          </div>
+          </div-->
 
         </div>
 
@@ -403,7 +421,7 @@
     </section><!-- End Services Section -->
 
     <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
+    <!--section id="testimonials" class="testimonials">
       <div class="container" data-aos="zoom-in">
 
         <div class="owl-carousel testimonials-carousel">
@@ -466,10 +484,11 @@
         </div>
 
       </div>
-    </section><!-- End Testimonials Section -->
+    </section-->
+    <!-- End Testimonials Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
+    <!--section id="portfolio" class="portfolio">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -584,16 +603,18 @@
         </div>
 
       </div>
-    </section><!-- End Portfolio Section -->
+    </section-->
+    <!-- End Portfolio Section -->
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="team section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Team</h2>
-          <h3>Our Hardworking <span>Team</span></h3>
-          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+          <h2>Tim</h2>
+          <h3><span>Tim</span> kami</h3>
+          <!--p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p-->
+          <p></p>
         </div>
 
         <div class="row">
@@ -601,7 +622,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="member">
               <div class="member-img">
-                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                <img src="assets/img/team/afif.jpg" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="icofont-twitter"></i></a>
                   <a href=""><i class="icofont-facebook"></i></a>
@@ -610,8 +631,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
+                <h4>M. Al-Afif</h4>
+                <span>Jabatan</span>
               </div>
             </div>
           </div>
@@ -619,7 +640,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
               <div class="member-img">
-                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                <img src="assets/img/team/dayat.jpg" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="icofont-twitter"></i></a>
                   <a href=""><i class="icofont-facebook"></i></a>
@@ -628,8 +649,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
+                <h4>Moh. Hidayat Yasin</h4>
+                <span>Jabatan</span>
               </div>
             </div>
           </div>
@@ -637,7 +658,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
               <div class="member-img">
-                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                <img src="assets/img/team/dina.jpg" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="icofont-twitter"></i></a>
                   <a href=""><i class="icofont-facebook"></i></a>
@@ -646,8 +667,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
+                <h4>Dina</h4>
+                <span>Jabatan</span>
               </div>
             </div>
           </div>
@@ -655,7 +676,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
             <div class="member">
               <div class="member-img">
-                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+                <img src="assets/img/team/sausan.jpg" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="icofont-twitter"></i></a>
                   <a href=""><i class="icofont-facebook"></i></a>
@@ -664,8 +685,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
+                <h4>Sausan</h4>
+                <span>Jabatan</span>
               </div>
             </div>
           </div>
@@ -676,7 +697,7 @@
     </section><!-- End Team Section -->
 
     <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing">
+    <!--section id="pricing" class="pricing">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -759,10 +780,11 @@
         </div>
 
       </div>
-    </section><!-- End Pricing Section -->
+    </section-->
+    <!-- End Pricing Section -->
 
     <!-- ======= Frequently Asked Questions Section ======= -->
-    <section id="faq" class="faq section-bg">
+    <!--section id="faq" class="faq section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -830,40 +852,46 @@
         </ul>
 
       </div>
-    </section><!-- End Frequently Asked Questions Section -->
+    </section-->
+    <!-- End Frequently Asked Questions Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Contact</h2>
-          <h3><span>Contact Us</span></h3>
-          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+          <h2>Kontak</h2>
+          <h3>Silakan <span>Kontak</span> kami</h3>
+          <!--p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p-->
+          <p></p>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-6">
+          <div class="col-lg-4">
             <div class="info-box mb-4">
               <i class="bx bx-map"></i>
-              <h3>Our Address</h3>
-              <p>A108 Adam Street, New York, NY 535022</p>
+              <h3>Alamat</h3>
+              <p>
+                Jln. Cemara Blok E No 10 
+                <br> Kel. Rancabolang 
+                <br> Kec. Gedebage, Bandung
+              </p>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6">
+          <div class="col-lg-4 col-md-6">
             <div class="info-box  mb-4">
               <i class="bx bx-envelope"></i>
-              <h3>Email Us</h3>
-              <p>contact@example.com</p>
+              <h3>Email</h3>
+              <p>teamofficialvisindometadata@gmail.com</p>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6">
+          <div class="col-lg-4 col-md-6">
             <div class="info-box  mb-4">
               <i class="bx bx-phone-call"></i>
-              <h3>Call Us</h3>
-              <p>+1 5589 55488 55</p>
+              <h3>Telp</h3>
+              <p>+62 822-9725-5808</p>
             </div>
           </div>
 
@@ -872,7 +900,8 @@
         <div class="row" data-aos="fade-up" data-aos-delay="100">
 
           <div class="col-lg-6 ">
-            <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+            <!--iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe-->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d990.0990164639466!2d107.69172472913874!3d-6.962517368470321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c28b3774318f%3A0x5d5b110b6ea7f02a!2sJl.%20Cemara%20E%203-15%2C%20Rancabolang%2C%20Kec.%20Gedebage%2C%20Kota%20Bandung%2C%20Jawa%20Barat%2040295!5e0!3m2!1sen!2sid!4v1607400009846!5m2!1sen!2sid" width="600" height="450" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           </div>
 
           <div class="col-lg-6">
@@ -914,7 +943,7 @@
   <!-- ======= Footer ======= -->
   <footer id="footer">
 
-    <div class="footer-newsletter">
+    <!--div class="footer-newsletter">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6">
@@ -926,9 +955,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </div-->
 
-    <div class="footer-top">
+    <!--div class="footer-top">
       <div class="container">
         <div class="row">
 
@@ -979,7 +1008,7 @@
 
         </div>
       </div>
-    </div>
+    </div-->
 
     <div class="container py-4">
       <div class="copyright">
