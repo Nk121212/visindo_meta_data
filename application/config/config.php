@@ -400,11 +400,11 @@ $config['sess_regenerate_destroy'] = FALSE;
 |       'cookie_httponly') will also affect sessions.
 |
 */
-$config['cookie_prefix']	= '';
-$config['cookie_domain']	= '';
+$config['cookie_prefix']    = '';
+$config['cookie_domain']    = ''; 
 $config['cookie_path']      = '/; SameSite=None';
-$config['cookie_secure']	= TRUE;
-$config['cookie_httponly'] 	= FALSE;
+$config['cookie_secure']    = TRUE;
+$config['cookie_httponly']  = FALSE;
 
 /*
 |--------------------------------------------------------------------------
