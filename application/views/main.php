@@ -10,11 +10,11 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/favicon/favicon-16x16.png" rel="icon">
+  <link href="assets/img/apple-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="assets/css/my_css.css" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -60,8 +60,6 @@
     <div class="container d-flex align-items-center">
 
       <h1 class="logo mr-auto"><a href="<?=base_url()?>main">VMD<span>.</span></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="<?=base_url()?>main" class="logo mr-auto"><img src="assets/img/logo.png" alt=""></a>-->
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
@@ -89,6 +87,7 @@
             </ul>
           </li-->
           <li><a href="#contact">Kontak</a></li>
+          <li><a href="<?=base_url()?>Main/login_modal" data-toggle="modal" class="login_or_logout"> Login</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
@@ -123,21 +122,28 @@
           <p></p>
         </div>
 
+        <div class="col-lg-12 text-center text-white pt-4 pt-lg-0 show-on-login" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+          <hr>
+          <a class="btn btn-sm btn-primary" target="_blank" href="<?=base_url()?>main/about_us_page"><i class="icofont-edit"></i> Update</a>
+          <hr>
+        </div>
+
         <div class="row">
           <div class="col-lg-6" data-aos="zoom-out" data-aos-delay="100">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+            <img src="<?=$about_us->row()->image?>" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
             <p class="font-italic">
-              Team kami memiliki pengalaman dan keterampilan yang sangat baik dengan rekam jejak yang qualify untuk pekerjaan di Badan Pertanahan Nasional dan kami selalu berupaya memberikan pelayanan dan kualitas terbaik dari setiap pekerjaan.
+              <?=isset($about_us->row()->text_1) ? $about_us->row()->text_1 : ''?>
             </p>
             <p class="font-italic">
-              Kami berkomitmen menyajikan informasi valid dan akurat atas tiap-tiap bidang pekerjaan yang kami kerjakan berdasarkan pengalaman pada Kantah-Kantah yang pernah dilalui demi menyukseskan Program Percepatan Kebijakan Satu Peta.
+              <?=isset($about_us->row()->text_2) ? $about_us->row()->text_2 : ''?>
             </p>
             <p class="font-italic">
-              Untuk produk software, kami merancang desain aplikasi sesuai dengan tren terbaru dan mengedepankan desain responsif serta fungsi operasional yang dapat memberikan kegunaan dan kemudahan bagi penggunanya.
+              <?=isset($about_us->row()->text_3) ? $about_us->row()->text_3 : ''?>
             </p>
           </div>
+          
         </div>
 
       </div>
@@ -153,13 +159,19 @@
           <!--p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p-->
         </div>
 
+        <div class="col-lg-12 text-center text-white pt-4 pt-lg-0 show-on-login" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+          <hr>
+          <a class="btn btn-sm btn-primary" target="_blank" href="<?=base_url()?>main/visi_misi_page"><i class="icofont-edit"></i> Update</a>
+          <hr>
+        </div>
+
         <div class="row">
           <div class="col-lg-6 text-center">
             <h3>
               Visi
             </h3>
             <p class="font-italic">
-              Transformasi menuju perbaikan dengan mengintegrasikan dunia online dan lini bisnis dimana semua proses berjalan dengan internet sebagai penopang utama menjadi Visi utama PT. Visindo Meta Data.
+              <?=isset($visi_misi->row()->visi) ? $visi_misi->row()->visi : ''?>
             </p>
           </div>
           <div class="col-lg-6 text-center">
@@ -167,50 +179,14 @@
               Misi
             </h3>
             <p class="font-italic">
-              Memberikan pelayanan jasa konsultasi dan pengembangan yang terbaik, bermutu tinggi, berkualitas dan tepat waktu Membantu klien mengembangkan ide-ide kreatif, gagasan inovatif, pemikiran inspiratif dan memberikan solusi yang terbaik.
+              <?=isset($visi_misi->row()->misi) ? $visi_misi->row()->misi : ''?>
             </p>
           </div>
+
         </div>
 
       </div>
     </section>
-    <!-- End Visi & Misi Section -->
-
-    <!-- ======= Clients Section ======= -->
-    <!--section id="clients" class="clients section-bg">
-      <div class="container" data-aos="zoom-in">
-
-        <div class="row">
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
-          </div>
-
-        </div>
-
-      </div>
-    </section-->
-    <!-- End Clients Section -->
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
@@ -223,37 +199,45 @@
           <p></p>
         </div>
 
+        <div class="col-lg-12 text-center text-white pt-4 pt-lg-0 show-on-login" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+          <hr>
+          <a class="btn btn-sm btn-primary" target="_blank" href="<?=base_url()?>main/pelayanan_page"><i class="icofont-edit"></i> Update</a>
+          <hr>
+        </div>
+
+
         <div class="row">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-world"></i></div>
               <h4><a href="">Jasa Pekerjaan</a></h4>
               <p>
-                Surveyor Pengukuran, Pemetaan Entry Data Buku Tanah, Surat Ukur, Validasi Tekstual, Validasi Spatial, Peningkatan Kualitas Data GeoKKPWeb, Digitalisasi Dokumen Arsp dan Warkah, Surveyor PTSL K1, Pemetaan K4 PTSL
+                <?=isset($service->row()->jasa_pelayanan) ? $service->row()->jasa_pelayanan : ''?>
               </p>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-file"></i></div>
               <h4><a href="">E-Arsip</a></h4>
               <p>
-                salah satu pengembangan produk dan pelayanan yang dikhususkan untuk pengelolaan arsip yang ada di Badan Pertanahan Nasional
+                <?=isset($service->row()->e_arsip) ? $service->row()->e_arsip : ''?>
               </p>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-tachometer"></i></div>
               <h4><a href="">Pembangunan Aplikasi</a></h4>
               <p>
-                Kami melayani pembuatan aplikasi atau software yang berbasis Desktop dan Web yang di customze sesuai dengan kebutuhan anda
+                <?=isset($service->row()->aplikasi_build) ? $service->row()->aplikasi_build : ''?>
               </p>
             </div>
           </div>
 
+          
         </div>
 
       </div>
@@ -270,36 +254,38 @@
           <p></p>
         </div>
 
+        <div class="col-lg-12 text-center text-white pt-4 pt-lg-0 show-on-login" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+          <hr>
+          <a class="btn btn-sm btn-primary" target="_blank" href="<?=base_url()?>main/activity_page"><i class="icofont-edit"></i> Update</a>
+          <hr>
+        </div>
+
         <div class="row">
+
+          <?php 
+            foreach ($activity->result() as $key => $value) {
+          ?>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="member">
               <div class="member-img">
-                <img src="assets/img/activity/bpn_2019.png" class="img-fluid" alt="">
-                <!--div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div-->
+                <img src="<?=$value->image?>" class="img-fluid" alt="">
               </div>
               <div class="member-info">
-                <h4>BPN 2019</h4>
-                <span>Pemaparan Program E-Arsip</span>
+                <h4><?=$value->title?></h4>
+                <span><?=$value->desc?></span>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+          <?php
+            }
+          ?>
+
+          <!--div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
               <div class="member-img">
                 <img src="assets/img/activity/e_arsip.png" class="img-fluid" alt="">
-                <!--div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div-->
               </div>
               <div class="member-info">
                 <h4>Surat Ukur</h4>
@@ -312,19 +298,15 @@
             <div class="member">
               <div class="member-img">
                 <img src="assets/img/activity/editor.png" class="img-fluid" alt="">
-                <!--div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div-->
               </div>
               <div class="member-info">
                 <h4>Development Aplikasi</h4>
                 <span>Developer berpengalaman</span>
               </div>
             </div>
-          </div>
+          </div-->
+
+          
 
         </div>
 
@@ -342,12 +324,22 @@
           <p></p>
         </div>
 
+        <div class="col-lg-12 text-center text-white pt-4 pt-lg-0 show-on-login" data-aos="fade-up" data-aos-delay="100" style="display: none;">
+          <hr>
+          <a class="btn btn-sm btn-primary" target="_blank" href="<?=base_url()?>main/team_page"><i class="icofont-edit"></i> Update</a>
+          <hr>
+        </div>
+
         <div class="row">
+
+          <?php
+            foreach ($team->result() as $data_team) {
+          ?>
 
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="member">
               <div class="member-img">
-                <img src="assets/img/team/ansar.jpg" class="img-fluid" alt="">
+                <img src="<?=$data_team->image?>" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="icofont-twitter"></i></a>
                   <a href=""><i class="icofont-facebook"></i></a>
@@ -356,76 +348,23 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Ansar</h4>
-                <span>Pemetaan Kadastral & Spatial</span>
+                <h4><?=$data_team->nama?></h4>
+                <span><?=$data_team->jabatan?></span>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="member">
-              <div class="member-img">
-                <img src="assets/img/team/dedi_syafrudin.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Dedi Syafrudin</h4>
-                <span>Elektikal & Mekanikal</span>
-              </div>
-            </div>
-          </div>
+          <?php
+            }
+          ?>
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="member">
-              <div class="member-img">
-                <img src="assets/img/team/dwi_putri_aprilia.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Dwi Putri Aprilia</h4>
-                <span>Sistem Analis & Editor</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="member">
-              <div class="member-img">
-                <img src="assets/img/team/nurbahirah_ulfa.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Nurbahirah Ulfa</h4>
-                <span>Drafter & Validator</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            
-          </div>
-          <div class="col-lg-3 text-right" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-12 text-center" data-aos="fade-up" data-aos-delay="300">
             <p class="font-italic">
               <button class="btn btn-primary btn-xs text-white" href="<?=base_url()?>Main/struktur_organisasi_modal" data-toggle="modal"> 
                 <i class="bx bx-show"></i> Struktur Oranisasi</button>
             </p>
           </div>
-          <div class="col-lg-3 text-left" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-12 text-center" data-aos="fade-up" data-aos-delay="300">
             <p class="font-italic">
               <button class="btn btn-primary btn-xs text-white" href="<?=base_url()?>Main/modal_team" data-toggle="modal"> 
                 <i class="bx bx-show-alt"></i> Selengkapnya...</button>
@@ -591,12 +530,10 @@
         </div>
       </div>
     </div-->
-
-    <div class="load-modal"></div>
-
     <div class="container py-4">
       <div class="copyright">
-        &copy; Copyright <strong><span>BizLand</span></strong>. All Rights Reserved
+        &copy; Copyright 
+        <strong><span>BizLand</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
@@ -626,24 +563,55 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/sweetalert.js"></script>
+  <script src="assets/js/my_script.js"></script>
 
   <script type="text/javascript">
 
     $(document).ready(function(){
 
-        $('[data-toggle="modal"]').click(function(e) {
-          e.preventDefault();
-          var url = $(this).attr('href');
-          if (url.indexOf('#') == 0) {
-            $(url).modal('open');
-          } else {
-            $.get(url, function(data) {
-              $('<div class="modal hide fade">' + data + '</div>').modal();
-            });
-          }
-        });
+      alert('<?=$session?>');
+
+        message_onlogin();
+        change_login_icon();
 
     })
+
+    function message_onlogin(){
+
+      var mess = "<?=$this->session->flashdata('message')?>";
+
+      if(mess === ""){
+
+      }else{
+        Swal.fire({
+          //position: 'top-end',
+          icon: 'success',
+          title: mess,
+          showConfirmButton: false,
+          timer: 1500
+        })
+      }
+
+    }
+
+    function change_login_icon(){
+
+      var session = "<?=$session?>";
+
+      if(session === 'true'){
+        //alert('true');
+        //$("#auth_log").text("");
+        $(".login_or_logout").text("Logout");
+        //$("#auth_log").attr("class","icofont-logout");
+        $(".login_or_logout").attr("href","<?=base_url()?>Main/logout");
+        $('div.show-on-login').removeAttr("style");
+        
+      }else{
+        //alert('false');
+      }
+
+    }
          
   </script>
 

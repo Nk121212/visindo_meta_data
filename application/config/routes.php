@@ -54,3 +54,4 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['main'] = 'main';
+$route['ajax/([a-zA-Z0-9-]+)(.json)'] = 'Api/$1';
