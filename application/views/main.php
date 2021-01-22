@@ -87,7 +87,7 @@
             </ul>
           </li-->
           <li><a href="#contact">Kontak</a></li>
-          <li><a href="<?=base_url()?>Main/login_modal" data-toggle="modal" class="login_or_logout"> Login</a></li>
+          <li><a href="<?=base_url()?>main/login_modal" class="login_or_logout button-modal"> Login</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
@@ -360,13 +360,13 @@
 
           <div class="col-lg-12 text-center" data-aos="fade-up" data-aos-delay="300">
             <p class="font-italic">
-              <button class="btn btn-primary btn-xs text-white" href="<?=base_url()?>Main/struktur_organisasi_modal" data-toggle="modal"> 
+              <button class="btn btn-primary btn-xs text-white button-modal" href="<?=base_url()?>main/struktur_organisasi_modal"> 
                 <i class="bx bx-show"></i> Struktur Oranisasi</button>
             </p>
           </div>
           <div class="col-lg-12 text-center" data-aos="fade-up" data-aos-delay="300">
             <p class="font-italic">
-              <button class="btn btn-primary btn-xs text-white" href="<?=base_url()?>Main/modal_team" data-toggle="modal"> 
+              <button class="btn btn-primary btn-xs text-white button-modal" href="<?=base_url()?>main/modal_team"> 
                 <i class="bx bx-show-alt"></i> Selengkapnya...</button>
             </p>
           </div>
@@ -570,10 +570,8 @@
 
     $(document).ready(function(){
 
-      alert('<?=$session?>');
-
+      //alert('<?=$session?>');
         message_onlogin();
-        change_login_icon();
 
     })
 
@@ -583,7 +581,26 @@
 
       if(mess === ""){
 
+        Swal.fire({
+          //position: 'top-end',
+          icon: 'error',
+          title: 'You are not login',
+          showConfirmButton: false,
+          timer: 1500
+        })
+
       }else{
+
+        $(".login_or_logout").text("Logout");
+        $(".login_or_logout").attr("href","<?=base_url()?>main/logout");
+        $(".login_or_logout").attr("target","_blank");
+
+        $(".button-modal").attr('class', 'login_or_logout');
+        //$(".login_or_logout").removeAttr("data-toggle");
+
+        $('div.show-on-login').removeAttr("style");
+
+
         Swal.fire({
           //position: 'top-end',
           icon: 'success',
@@ -591,24 +608,7 @@
           showConfirmButton: false,
           timer: 1500
         })
-      }
 
-    }
-
-    function change_login_icon(){
-
-      var session = "<?=$session?>";
-
-      if(session === 'true'){
-        //alert('true');
-        //$("#auth_log").text("");
-        $(".login_or_logout").text("Logout");
-        //$("#auth_log").attr("class","icofont-logout");
-        $(".login_or_logout").attr("href","<?=base_url()?>Main/logout");
-        $('div.show-on-login').removeAttr("style");
-        
-      }else{
-        //alert('false');
       }
 
     }

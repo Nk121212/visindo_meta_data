@@ -6,7 +6,7 @@
 */
 (function($) {
 
-    $('[data-toggle="modal"]').click(function(e) {
+    $('.button-modal').click(function(e) {
       e.preventDefault();
       var url = $(this).attr('href');
       if (url.indexOf('#') == 0) {

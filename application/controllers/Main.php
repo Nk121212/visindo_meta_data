@@ -13,9 +13,32 @@ class Main extends CI_Controller {
 		$data['service'] = $this->m_crud->total_record('vmd_service');
 		$data['activity'] = $this->m_crud->total_record('vmd_activity');
 		$data['team'] = $this->m_crud->total_record_paging('vmd_team', '0', '4');
-		$data['session'] = empty($this->session->userdata('user_login')) ? 'true' : 'false';
+		$data['session'] = isset($_SESSION['user_login']) ? "ok" : "failed";
 
 		$this->load->view('main', $data);
+	}
+
+	public function login(){
+
+		$this->load->model('m_login');
+
+		$check = $this->m_login->is_user_exist();
+
+		if($check === true){
+			$this->session->set_flashdata('message', 'Login Success');
+            $session_setted = array('user_login' => true, 'sess_message' => 'Session Exist');
+            $this->session->set_userdata($session_setted);
+		}else{
+			$this->session->set_flashdata('message', 'Login Failed, Check your email & Password!');
+		}
+
+		redirect('main');
+		
+	}
+
+	public function logout(){
+		$this->session->set_flashdata('message', '');
+		redirect("main");
 	}
 
 	public function modal_team(){
@@ -333,30 +356,6 @@ class Main extends CI_Controller {
 
 		echo json_encode($resp, JSON_PRETTY_PRINT);
 
-	}
-
-	public function login(){
-
-		$this->load->model('m_login');
-
-		$check = $this->m_login->is_user_exist();
-
-		if($check === true){
-			$this->session->set_flashdata('message', 'Login Success');
-            $session_setted = array('user_login' => true, 'sess_message' => 'Session Exist');
-            $this->session->set_userdata($session_setted);
-		}else{
-			$this->session->set_flashdata('message', 'Login Failed, Check your email & Password!');
-		}
-
-		redirect(base_url());
-		
-	}
-
-	public function logout(){
-		$this->session->sess_destroy();
-		//$this->session->set_flashdata('message', 'Logout Success');
-		header("Location: ".base_url()."");
 	}
 
 	public function about_us_page(){
